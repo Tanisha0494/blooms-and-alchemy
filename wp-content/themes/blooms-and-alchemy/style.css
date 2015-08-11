@@ -1,0 +1,867 @@
+/*
+Theme Name:Blooms & Alchemy Site  
+Theme URI: 
+Template: Storefront
+Description: A theme for a shop.
+Author: Tanisha Rose
+Author URI: http://www.tanisharosemedia.com
+Version: 1.0
+License: GPLv2 
+License URI: license.txt
+Tags:white, two-columns, responsive, child theme 
+*/
+
+
+/* 
+== FLEX-BOX 
+*/
+
+
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* 
+  == Micro Clearfix 
+  http://nicolasgallagher.com/micro-clearfix-hack/
+*/
+
+/* For modern browsers */
+
+.cf:before,
+.cf:after {
+  content:"";
+  display:table;
+}
+
+.cf:after {
+  clear:both;
+}
+
+/* For IE 6/7 (trigger hasLayout) */
+.cf {
+  *zoom:1;
+}
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box; 
+  -webkit-box-sizing: border-box; 
+  box-sizing: border-box;
+}
+
+ /*==@Font-Face*/
+
+ @font-face {
+    font-family: 'texgyreadventorbold';
+    src: url('styles/texgyreadventor-bold-webfont.eot');
+    src: url('styles/texgyreadventor-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('styles/texgyreadventor-bold-webfont.woff') format('woff'),
+         url('styles/texgyreadventor-bold-webfont.ttf') format('truetype'),
+         url('styles/texgyreadventor-bold-webfont.svg#texgyreadventorbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'texgyreadventorregular';
+    src: url('styles/texgyreadventor-regular-webfont.eot');
+    src: url('styles/texgyreadventor-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('styles/texgyreadventor-regular-webfont.woff') format('woff'),
+         url('styles/texgyreadventor-regular-webfont.ttf') format('truetype'),
+         url('styles/texgyreadventor-regular-webfont.svg#texgyreadventorregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'amaticbold';
+    src: url('styles/amatic-bold-webfont.eot');
+    src: url('styles/amatic-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('styles/amatic-bold-webfont.woff2') format('woff2'),
+         url('styles/amatic-bold-webfont.woff') format('woff'),
+         url('styles/amatic-bold-webfont.ttf') format('truetype'),
+         url('styles/amatic-bold-webfont.svg#amaticbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+  font-family: 'amatic_scregular';
+  src: url('styles/amaticsc-regular-webfont.eot');
+  src: url('styles/amaticsc-regular-webfont.eot?#iefix') format('embedded-opentype'),
+       url('styles/amaticsc-regular-webfont.woff2') format('woff2'),
+       url('styles/amaticsc-regular-webfont.woff') format('woff'),
+       url('styles/amaticsc-regular-webfont.ttf') format('truetype'),
+       url('styles/amaticsc-regular-webfont.svg#amatic_scregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*
+==Basic Styles
+*/
+
+.hide{
+  display:none;
+}
+
+/*
+==Header Styles
+*/
+
+body div.site-branding{
+  display:none;
+}
+
+ul.site-header-cart{
+  background-color:#C4A2B8;  
+  margin-left:1rem;
+}
+
+ul.site-header-cart li.current-menu-item > a{
+  color:#793F64;
+}
+
+ul.site-header-cart a:hover{
+  color:#C567A3;
+}
+
+ul.cart_list a.button:hover{
+  outline:none;
+  margin:0;
+}
+ a.post-link{
+  display:block;
+ }
+
+/*
+==Body Styles
+*/
+
+
+body{
+  font-size:100%;
+  font-family:'texgyreadventorregular';
+  font-weight: normal;
+  font-style: normal;
+  clear:both;
+}
+
+ul.products li.product h3{
+  font-size:3rem;
+  color:#A21E59;
+  margin-bottom:10px;
+}
+
+main, header, p.woocommerce-info, aside.baside{
+  margin:1rem;
+  padding:.75rem;
+  clear:both;
+}
+
+div#primary{
+  width:100%;
+}
+
+section#primary{
+  width:100%;
+}
+
+.hentry * {
+  max-width:100%;
+  height:auto;
+}
+
+h1,h2,h3,h4,h5,h6{
+	font-family:'amaticbold';
+	font-weight: normal;
+  font-style: normal;
+}
+
+h1{
+	font-size:3rem;
+	color:#A21E59;
+	margin-bottom:10px;
+}
+
+h2{
+	font-size:2.45rem;
+	color:#C567A3;
+  margin:1rem;
+}
+
+h3,h4,h5,h6{
+  font-size:2.35rem;
+  margin:.75rem;
+
+}
+
+body.product ul.products li.product h3{
+  font-size:2.435rem;
+}
+
+body.contact span{
+  display:inline;
+}
+
+body.contact div#comments,
+body.privacy-policy-and-terms-of-service div#comments{
+  display:none;
+}
+
+body.contact div.entry-content p{
+  margin-bottom:.5rem;
+}
+
+body article.hentry header.entry-header{
+  margin-bottom:1.5rem;
+}
+
+
+main a{
+  padding:.5rem;
+  color:#793F64;
+}
+
+main a:hover,
+main a:visited{
+  color:#45243A;
+}
+
+p.buttons a.button:focus, p.buttons a.button:active , p.buttons a.button:hover{
+  outline:none;
+  border:none;
+}
+
+a:focus, a:active{
+  outline:none;
+}
+
+a.button:focus, a.button:active, a.button:hover{
+  outline:none;
+  border:none;
+}
+
+body.cart a.checkout-button:focus, body.cart a.checkout-button:active, body.cart a.checkout-button:hover{
+  outline:none;
+  border:none;
+}
+
+.page div.proceed-to-checkout a.checkout-button:hover,
+.page div.proceed-to-checkout a.checkout-button:active{
+  outline:none;
+  border:none;
+}
+
+
+/*==NAVIGATION STYLES*/
+
+button.menu-toggle{
+  display:none;
+}
+
+header nav.gnav ul.gmenu li{
+  display:block;
+  font-size:2.75rem;
+  font-family:'amaticbold';
+  text-align:center;
+}
+
+header nav.gnav ul.gmenu li a{
+  display:block;
+  color:#793F64;
+}
+
+header nav.gnav ul li a:hover{
+  color:#45243A;
+  border-bottom: 5px solid #45243A;
+}
+
+body.product header nav.gnav ul li.nshop a{
+    color:#45243A;
+  border-bottom: 5px solid #45243A;
+}
+
+body.about-2 header nav.gnav ul li.nabout a{
+    color:#45243A;
+  border-bottom: 5px solid #45243A;
+}
+
+body.ingredients header nav.gnav ul li.ningredients a{
+  color:#45243A;
+  border-bottom: 5px solid #45243A;
+}
+
+body.goddess header nav.gnav ul li.ngoddess a,
+body.single-goddess header nav.gnav ul li.ngoddess a{
+  color:#45243A;
+  border-bottom: 5px solid #45243A;
+}
+
+body.moon header nav.gnav ul.gmenu li.nmoon a,
+body.single-moon header nav.gnav ul.gmenu li.nmoon a{
+  color:#45243A;
+  border-bottom: 5px solid #45243A;
+}
+
+body.contact header nav.gnav ul li.ncontact a{
+  color:#45243A;
+  border-bottom: 5px solid #45243A;
+}
+ 
+body.blog header nav.gnav ul li.nblog a{
+  color:#45243A;
+  border-bottom: 5px solid #45243A;
+}
+
+header ul.gmenu li{
+  margin:.25rem;
+  padding:.5rem;
+  text-align:center;
+}
+
+header ul.gmenu{
+  margin:0;
+  padding:0;
+}
+
+nav.gnav{
+  clear:both;
+}
+
+nav#site-navigation{
+  display:none;
+}
+
+
+/*==MAIN STYLES*/
+
+
+header{
+  clear:both;
+}
+
+header h1.logo{
+  display:block;
+  width:70%;
+  margin:0 auto;
+  text-align:center;
+  clear:both;
+  margin:0 auto;
+}
+
+header h1.logo a{
+  display:block;
+}
+
+header h1.logo img{
+  display:block;
+}
+
+h2 a{
+  text-decoration:none;
+  color:#A21E59;
+}
+
+p{
+  margin:1em .5em;
+  line-height:1.75rem;
+  font-size: 1.15rem;
+}
+
+p.woocommerce-info{
+  background-color:#C567A3;
+}
+
+p.woocommerce-result-count{
+  margin-top:0;
+  margin-bottom:0;
+  padding:0;
+}
+
+body.product ul.products li span.price span.amount{
+  color:#000;
+}
+
+body.goddess a, body.moon a{
+  display:block;
+  text-align: center;
+}
+
+.moon main a, .goddess main a{
+    width:100%;
+}
+
+.moon main img, .goddess main img{
+  width:100%;
+}
+
+
+.home img.thumb{
+  width:100%;
+  display:block;
+}
+
+.home .entry-content{
+  width:100%;
+}
+
+article.postmeta{
+	background:#45243A;
+	padding:5px;
+  clear:both;
+}
+
+article.postmeta ul{
+  list-style-type:none;
+  border-top:#FFF solid 3px;
+}
+
+article.postmeta a{
+  color:#FFF;
+  text-decoration:none;
+  display:block;
+}
+
+article.postmeta span{
+  width:15%;
+  float:left;
+  margin-top:.5rem;
+  padding:0;
+}
+
+article.postmeta a:hover,
+article.entry-content a:hover,
+article.postmeta a:focus,
+article.entry-content a:focus{
+  text-decoration:underline;
+}
+
+body.blog article span{
+	font-size:1rem;
+	color:#FFF;
+	margin:10px;
+	display:block;
+  text-align:center;
+}
+
+.hentry .entry-content ul{
+  padding-left:1rem;
+  list-style-type:disc;
+  color:#000;
+}
+
+.alignleft, .thumb{
+  float:left;
+}
+
+.alignright{
+  float:right;
+
+}
+
+.aligncenter{
+  text-align:center;
+}
+
+.thumb{
+  margin:1em .75em;
+}
+
+.hentry img{
+  padding: 0 .5em;
+}
+
+.gallery{
+  padding:1rem;
+}
+
+.gallery img{
+  margin:0;
+}
+
+
+.format-quote{
+  position:relative;
+  width:auto;
+  quotes: "“" "”" "‘" "’";
+}
+
+.format-quote:before {
+  content: open-quote;
+  position:absolute;
+  font-size:6em;
+  margin:0;
+  padding:0;
+  top:.65rem;
+  left:-0.7rem;
+}
+
+div.site-search{
+  margin:1.5rem;
+}
+
+ul.woocommerce-error a.button:hover{
+  outline:none;
+  margin: 0;
+}
+
+a.button , a.button:visited{
+  background-color:#45243A;
+  color:#FFFFFF;
+}
+
+a.button:hover{
+  background-color:transparent;
+  outline: 4px solid #45243A;
+  color:#45243A;
+  margin:.25rem;
+}
+
+div.nav-previous, div.nav-next{
+  background-color:#45243A;
+  display:block;
+  margin:.5rem;
+  padding:.25rem;
+  text-align:center;
+}
+
+div.nav-previous a[rel="prev"], div.nav-next a[rel="next"]{
+  color:#FFF;
+  font-size:1.5rem;
+  display:block;
+}
+
+div.wp-pagenavi{
+  margin:1em 0;
+}
+
+div.wp-pagenavi a,
+div.wp-pagenavi span{
+  color:#45243A;
+}
+
+.entry-content ol, .entry-content ul{
+  margin:1rem;
+  list-style-type: upper-roman;
+}
+
+ol li , ul li{
+  margin:.75rem;
+}
+
+section.hentry{
+  margin:1rem;
+}
+
+article.entrycontent{
+  padding:1rem;
+}
+
+ul.site-header-cart span.amount{
+  color:#FFF;
+}
+
+/*==FOOTER STYLES*/
+
+footer{
+  clear:both;
+  background:#45243A;
+  padding:1rem;
+}
+
+/*==FORM STYLES*/
+
+
+/*==BREAKPOINT STYLES*/
+
+@media only screen and (min-width:550px){
+
+  div.nav-previous{
+    width:45%;
+    float:left;
+  }
+
+  div.nav-next{
+    width:45%;
+    float:right;
+  }
+
+  div.nav-previous:hover,div.nav-next:hover{
+    background-color:transparent;
+    outline: 4px solid #45243A;
+    color:#45243A;
+  }
+
+  div.nav-previous a:hover, div.nav-next a:hover{
+    color:#45243A;
+  }
+
+  ul.site-header-cart{
+  background-color:#C4A2B8;  
+  margin-right:1rem;
+  padding-top:1rem;
+  margin-top:1.25rem;
+  }
+
+  ul.site-header-cart li{
+    margin:0;
+    padding:1rem;
+  }
+
+  .widget_shopping_cart_content ul.product_list_widget li a img{
+    max-width:6rem;
+  }
+  .moon main a, .goddess main a{
+    width:48%;
+    float:left;
+    margin:.25%;
+  }
+
+
+  .home img.thumb{
+  width:95%;
+  display:block;
+  }
+
+}
+
+@media only screen and (min-width:600px){
+
+
+}
+
+@media only screen and (min-width:750px){
+
+  header nav.gnav ul.gmenu li{
+    width:25%;
+    float:left;
+    font-size:3rem;
+  }
+
+  div.nav-previous{
+    width:30%;
+    float:left;
+  }
+
+  div.nav-next{
+    width:30%;
+    float:right;
+  }
+
+
+  div.woocommerce ul.products li.product{
+    width:45%;
+    margin:1.05rem;
+    float:left;
+  }
+
+
+  #nav-icon2{
+    display:none;
+  }
+
+  main.cf div.content-area{
+    width:100%;
+  }
+
+  div.col2-set{
+    width:50%;
+  }
+
+  div.col2-set p.form-row-first,
+  div.col2-set p.form-row-last{
+    width:47%;
+  }
+
+  div.col2-set p.form-row-first{
+    margin-right:2%;
+  }
+
+  div.site-search{
+    width:40%;
+    float:left;
+  }
+
+  ul.site-header-cart{
+    width:40%;
+    float:right;
+    
+  }
+
+  .moon main a, .goddess main a{
+    width:30%;
+    float:left;
+    margin:.5%;
+  }
+
+  .moon main img{
+    width:100%;
+    height:auto;
+  }
+
+
+  .home img.thumb{
+    width:50%;
+    display:block;
+    float:right;
+  }
+
+  .home .entry-content{
+    float:left;
+    width:45%;
+  }
+
+}
+
+@media only screen and (min-width:950px){
+
+  header nav.gnav ul.gmenu li{
+    width:30%;
+    float:left;
+    font-size:3rem;
+  }
+
+
+  div#ninja_forms_field_1_div_wrap, div#ninja_forms_field_2_div_wrap, div#ninja_forms_field_7_div_wrap{
+    width:32%;
+    float:left;
+    margin:.35rem;
+  }
+
+  div.ninja-forms-all-fields-wrap div#ninja_forms_field_3_div_wrap{
+    clear:both;
+  }
+
+
+
+}
+
+@media only screen and (min-width:1000px){
+
+  div.nav-previous{
+    width:20%;
+    float:left;
+  }
+
+  div.nav-next{
+    width:20%;
+    float:right;
+  }
+
+  nav.gnav{
+    width:100%;
+  }
+
+  ul.gmenu{
+    text-align:center;
+  }
+
+  header nav.gnav ul.gmenu li{
+    width:23%;
+    float:left;
+    font-size:3rem;
+  }
+  
+   div.woocommerce ul.products li.product{
+    width:20%;
+    margin:1rem;
+    float:left;
+  }
+
+
+
+}
+
+
+@media only screen and (min-width:1200px){  
+
+  div.nav-previous{
+    width:15%;
+    float:left;
+  }
+
+  div.nav-next{
+    width:15%;
+    float:right;
+  }
+
+  ul.site-header-cart{
+    width:30%;
+    float:right;
+    
+  }
+
+  header ul.gmenu li{
+    margin:.25rem;
+    padding:.5rem;
+  }
+
+
+  header nav.gnav ul.gmenu li{
+    width:13%;
+    float:left;
+    font-size:3rem;
+    margin:.45rem;
+    padding:0;
+  }
+
+  div.woocommerce ul.products li.product{
+    width:25%;
+    margin:1rem;
+    float:left;
+  }
+
+  div.woocommerce ul.products li.product{
+    width:23%;
+  }
+
+  div.site-search{
+    width:40%;
+    float:left;
+  }
+
+  footer{
+    clear:both;
+  }
+
+  .goddess main a, .moon main a{
+    width:23%;
+    margin:1%;
+    padding:.5rem;
+    text-align: center;
+    float:left;
+  }
+
+
+  .goddess main img , .moon main img{
+    display:block;
+    width:100%;
+  }
+
+  .single-goddess main img,
+  .single-moon main img{
+    display:block;
+    width:50%;
+    float:left;
+  }
+
+  .single-goddess .entry-content,
+  .single-moon .entry-content{
+    width:50%;
+    float:right;
+  }
+
+  div#ninja_forms_field_1_div_wrap, div#ninja_forms_field_2_div_wrap, div#ninja_forms_field_7_div_wrap{
+    width:32%;
+    float:left;
+    margin:.5rem;
+  }
+
+}
+
